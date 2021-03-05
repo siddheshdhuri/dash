@@ -1,0 +1,30 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+pandas = "*"
+jupyter = "*"
+jupyterlab = "*"
+matplotlib = "==3.2.2"
+seaborn = "*"
+plotly = "==4.11.0"
+voila = "*"
+voila-gridstack = "*"
+dash = "*"
+dash-bootstrap-components = "*"
+pyfladesk = "*"
+pyqt5 = "==5.10"
+pyinstaller = "*"
+pyodbc = "*"
+pyyaml = "*"
+imblearn = "*"
+lime = "*"
+shap = "*"
+xlsxwriter = "*"
+
+[requires]
+python_version = "3.7"

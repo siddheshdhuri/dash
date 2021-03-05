@@ -1,0 +1,59 @@
+############################################################################################################################
+# This is the tool configuation file. Here you can set tool parameters such as database name, tables, input dir etc..
+############################################################################################################################
+server_name: CVAPWPEQR001
+database_name: PACSQL_MTP
+
+demand_table: dbo.temp_dP_siteSummarised_materiallevel_REFRESH
+inventory_table: dbo.temp_iP_Summarised_materiallevel_REFRESH
+movemment_table: dbo.temp_mP_Summarised_materiallevel_REFRESH
+supply_plan_cofill_table: dbo.temp_sP_portSummarisedCofill_materiallevel_REFRESH
+supply_plan_inhouse_table: dbo.temp_sP_portSummarisedIH_materiallevel_REFRESH
+supply_plan_lineloading_table: dbo.temp_sP_portSummarisedIHLineLoading_materiallevel_REFRESH
+
+shift_data_table: dbo.ProductionShiftFile_FullVersion
+
+conversion_table: material.Output_ecc_ConversionTable
+production_capacity_table: production.Extract_ecc_ProductionCapability
+material_header_table: material.Model_MaterialHeader_02
+site_mapping_table: dbo.temp_tbl_usermaintained_CPEtoSAPSiteMapping
+
+projected_demand_table: model.MTP_WF003_02_ProjectedDemand_REFRESH
+
+demand_pickle: dP_siteSummarised
+inventory_pickle: iP_Summarised
+movement_pickle: mP_Summarised
+supply_plan_cofill_pickle: sP_portSummarisedCofill
+supply_plan_inhouse_pickle: sP_portSummarisedIH
+supply_plan_lineloading_pickle: sP_portSummarisedIHLineLoading
+shift_plan_pickle: 'MTP_WF003_05_Visualise Baseline Plan_ShiftData'
+dsi_pickle: 'dsi_pickle'
+
+
+
+input_pickle_dir: 'input/pickle'
+input_lever_dir: 'input/levers'
+metadata_dir: 'input/metadata'
+output_baseline_dir: 'output/baseline'
+output_viz_data_dir: 'output/viz_data'
+
+shift_lever_cols: ['Site_SAP','Line','Year_Period','Weeks_In_Period','Shift_Length', 
+                  'Shift_Days','Hours_Overtime', 'Hours_Crew', 'Loss_Factor','Hours_Down_Time',
+                  'Hours_Sched_PDT','Safety_Hours','Hours_Total_Available', 'Hours_Total_Available_Calc','Additional_Hours',
+                  'Additional_Hours_Used']
+
+# This is the list of sites where imports and cofill coming into the UK are first held.
+import_cofill_hub: ['5569', '5559']
+import_hub: ['5569-Import']
+cofill_hub: ['5559-Cofill']
+
+import_cofill_lever_file: 'import_cofill_lever.csv'
+import_cofill_metadata_file: 'import_cofill_metadata.csv'
+shift_lever_file: 'shift_lever.csv'
+
+pal_to_trucks_ratio: 26
+
+add_time_regardless_of_period: False
+
+
+
