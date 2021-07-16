@@ -1,4 +1,4 @@
-# This is the application for Mid-Term Planning.
+# This is the application for Resource Planning.
 
 
 ## Setting up project from Git
